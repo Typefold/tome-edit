@@ -1,0 +1,9 @@
+.post-type-page, .post-type-tome_media {
+	&.post-php, &.post-new-php {
+        #wpbody-content .wrap {
+            padding-top: 50px;
+
+            > h1 { display: none; }
+        }
+	}
+}

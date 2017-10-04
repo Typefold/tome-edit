@@ -1,0 +1,127 @@
+$hover-color: #DADADA;
+$hover-text-color: black;
+
+.page-options-wrapper {
+  padding-bottom: 20px;
+  z-index: 9999;
+  min-height: auto;
+  overflow: hidden;
+  position: absolute;
+  right: 20px;
+  width: 100px;
+
+  .show-page-options, .tome-publish {
+    padding: 10px 15px;
+    min-width: 100px;
+    float: right;
+  }
+
+  .tome-publish {
+    background: $tome-red;
+  }
+
+  .page-options-content {
+    display: none;
+    background: #282D33;
+    border: 1px solid #BBBBBB;
+    border-top: none;
+    border-bottom: none;
+
+    .accordion-navigation {
+
+      .content {
+        border: 0;
+        border-bottom: 1px solid #EAEAEA;
+        background: #F1F1F1;
+      }
+
+      &.active {
+        .fi-minus, .fi-plus {
+          background: $hover-color;
+          color: $hover-text-color;
+          border-bottom: 0;
+          border-color: $hover-color;
+        }
+      }
+
+
+      a.fi-plus, a.fi-minus {
+        position: relative;
+        border-top: 1px solid #1F1F1F;
+        color: white;
+        text-decoration: none;
+        background: #31373E;
+        margin-top: -1px;
+
+        &:hover {
+          background: $hover-color;
+          color: $hover-text-color;
+          border-color: $hover-color;
+        }
+
+        &:before {
+          position: absolute;
+          right: 15px;
+        }
+      }
+    }
+
+    #panel-header {
+      padding: 40px;
+
+      .columns {
+        text-align: center;
+      }
+      .dashicons {
+        font-size: 50px;
+        width: 50px;
+        height: 50px;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    .save-page-options {
+      border-radius: 3px;
+      background: $tome-blue;
+      padding: 10px 20px;
+      height: auto;
+      float: right;
+      margin: 15px 10px;
+      color: white;
+      border: none;
+
+      &:hover {
+        background: #007095;
+      }
+
+      &.active {
+        padding-left: 30px;
+
+        &:before {
+          opacity: 1;
+        }
+      }
+
+      &.loading {
+        background: url("../images/rolling.gif") no-repeat 10px center;
+        background-color: $tome-blue;
+        background-size: 14px;
+        padding-left: 35px;
+      }
+
+    }
+
+  }
+
+  .show-page-options {
+    background: #858384;
+    float: right;
+    }
+
+  .accordion {
+    margin-top: 0;
+  }
+
+}

@@ -1,0 +1,144 @@
+.publish-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 0;
+    z-index: 9989;
+    display: none;
+}
+
+.folded .custom-publish { left: 36px; }
+
+.custom-publish {
+    position: fixed;
+    top: 32px;
+    right: 0;
+    left: 160px;
+    z-index: 9989;
+
+    #submitdiv { display: inline-block; }
+
+    .top-part {
+        overflow: auto;
+        padding: 15px;
+        background: white;
+        border-bottom: 1px solid #DBDAD8;
+
+        .settings {
+            z-index: 99999;
+            overflow: auto;
+            float: left;
+            line-height: 30px;
+
+            .separator {
+                margin-right: 5px;
+                margin-left: 5px;
+                color: #D8D8D8;
+            }
+        }
+
+        .single-setting {
+            float: left;
+            margin-right: 25px;
+        }
+
+        .tome-publish-actions {
+            float: right;
+
+            button, a { margin-right: 15px; }
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .tome-delete-link {
+            width: 40px;
+            font-size: 16px;
+        }        
+    }
+
+    .sub-wrapper {
+        text-align: center;
+
+        .options {
+            display: none;
+            padding: 15px 20px;
+            background: #F9F9F6;
+            border-bottom: 1px solid #DADAC8;
+            text-align: center;
+
+            .single-option {
+                display: inline-block;
+                margin-right: 15px;
+                
+                input[type="radio"] { margin: 0 0 0 3px; }
+            }
+        }
+        #date-options {
+            p {
+                display: none;
+            }
+            .timestamp-wrap {
+                margin-right: 10px;
+                display: inline-block;
+            }
+        }
+
+        .close-options {
+            color: #C3C3C3;
+            a {
+                margin-left: 10px;
+                text-decoration: none;
+            }
+        }
+
+        .save-publish-options {
+            display: none;
+            background: #39B27D;
+            padding: 6px 30px;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            border: none;
+            margin: 0;
+        }
+    }
+}
+
+#chapter-options-modal {
+
+    .visibility-options {
+        .option-wrapper {
+            margin-bottom: 5px;
+        }
+
+        #post_password {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .save-chapter-options {
+        position: absolute;
+        right: 10px;
+        bottom: 15px;
+        height: 40px;
+        width: 100px;
+        letter-spacing: 1px;
+        font-size: 12px;
+        text-transform: uppercase;
+        border-radius: 2px;
+        box-shadow: rgba(0, 0, 0, 0.27) 0 0 6px;
+    }
+
+    .modal-section {
+        padding-bottom: 70px;
+    }
+
+}

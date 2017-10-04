@@ -1,0 +1,12 @@
+.post-type-post, .post-type-page {
+
+    &.post-php, &.post-new-php {
+        #wpbody-content .wrap {
+            padding-top: 50px;
+
+            > h1 { display: none; }
+
+            #postdivrich { margin-top: -3px; }
+        }
+	}
+}

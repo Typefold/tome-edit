@@ -1,0 +1,338 @@
+#wpwrap {
+	height: 100%;
+	#wpcontent {
+		height: 100%;
+		#wpbody {
+			height: 100%;
+			#wpbody-content {
+				height: 100%;
+				#tome-dashboard {
+					height: 100%;
+					>.row {
+						height: 100%;
+						.list-wrapper {
+							height: 90%;
+						}	
+					}
+				}
+			}
+		}
+	}
+}
+
+
+#tome-dashboard {
+	*, *:before, *:after { box-sizing: border-box; }
+
+	.row {
+		max-width: 1800px;
+		margin-left: 0;
+	}
+	.buttons-wrapper {
+		float: left;
+		padding: 30px;
+
+		.button {
+			padding: 5px 20px;
+			height: auto;
+
+			&:first-child { margin-right: 20px; }
+		}
+	}
+	.library-link {
+		float: right;
+		margin-left: 15px;
+	}
+
+	.list-wrapper {
+		width: 70%;
+		float: left;
+	}
+
+	.dashboard-nav-wrapper {
+		padding-left: 0;
+		width: 30%;
+		float: left;
+		padding-right: 25px;
+
+		.dashboard-nav {
+			margin-top: 40px;
+			background: #D8D5D2;
+			border-right: 1px solid #cbc7c3;
+			overflow: auto;
+			margin-left: -1px;
+
+			.action {
+				text-align: left;
+				padding: 20px 20px 20px 60px;
+				border-top: 0;
+				border-right: 0;
+				background: #d8d5d2;
+				cursor: pointer;
+				-webkit-transition: all 80ms ease-in;
+				transition: all 80ms ease-in;
+				float: left;
+				width: 100%;
+				position: relative;
+				border-bottom: 1px solid #cbc7c3;
+
+				&.dark {
+					background: #484D4E;
+					h2,i { color: #F1F8FF; }
+
+					&:hover { background: $tome-red; }
+				}
+
+				&:hover {
+					background: #cfcbc8;
+				}
+
+				&.active {
+					border: 1px solid darken($tome-green, 10%);
+					background: $tome-green;
+					position: relative;
+					z-index: 1;
+
+
+					i { color: darken($tome-green, 10%); }
+					h2 { color: white; }
+				}
+
+				i {
+					font-size: 22px;
+					width: 22px;
+					height: 22px;
+					display: block;
+					color: #848383;
+					position: absolute;
+					top: 50%;
+					margin-top: -11px;
+					left: 20px;
+				}
+
+				.cover-settings-icon {
+					display: inline-block;
+					width: 18px;
+					height: 23px;
+					background: url('../images/cover-settings.png');
+				}
+
+				h2 {
+					display: block;
+					margin: 0;
+					font-weight: 100;
+					color: #848383;
+					margin-top: 0;
+
+					a {
+						text-decoration: none;
+						text-transform: uppercase;
+						font-size: 14px;
+						letter-spacing: 1px;
+					}
+				}
+			}
+
+			.publish-action {
+				@extend .action;
+
+				background: $tome-red;
+				h2, i { color: white; }
+			}
+		}
+	}
+}
+
+
+
+.columns.list-wrapper {
+	background: white;
+	margin-top: 40px;
+	padding-top: 30px;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 5px;
+	position: relative;
+	z-index: 999;
+	border: 1px solid #e8e8e8;
+	padding-right: 30px;
+	padding-left: 30px;
+
+	.list { margin-bottom: 50px; }
+}
+
+#chapters-widget {
+	padding-top: 50px;
+	margin-bottom: 20px;
+
+	&.active {
+		&:after { right: 0; }
+		&:before, &:after {
+			opacity: 1;
+		}
+		.list,
+		.pagination,
+		.search-chapters,
+		.new-chapter,
+		.reorder-link { z-index: 0; opacity: 0; }
+	}
+
+	&:before {
+		content: " ";
+		position: absolute;
+		display: block;
+		left: 50%;
+		top: 50%;
+		margin-left: -40px;
+		margin-top: -40px;
+		width: 80px;
+		height: 80px;
+		border-radius: 220px;
+		box-shadow: 0 2px 0 0 $tome-green;
+		-ms-animation: uil-ring-anim 1s linear infinite;
+		-moz-animation: uil-ring-anim 1s linear infinite;
+		-webkit-animation: uil-ring-anim 1s linear infinite;
+		-o-animation: uil-ring-anim 1s linear infinite;
+		animation: uil-ring-anim 1s linear infinite;
+		transform: scale(0.25);
+		z-index: 9999;
+		opacity: 0;
+		transition: all 160ms ease-in;
+	}
+
+	.list,
+	.pagination,
+	.search-chapters,
+	.new-chapter,
+	.reorder-link {
+		position: relative;
+		z-index: 998;
+		opacity: 1;
+		transition: all 160ms ease-in;
+	}
+
+	.chapter-title a {
+		text-decoration: none;
+		color: black;
+
+		&:hover {
+			color: $tome-green;
+		}	
+	}
+
+	.cta-button {
+		background: $tome-green;
+		color: white;
+		text-decoration: none;
+		padding: 15px 30px;
+		font-size: 1.6em;
+		font-style: italic;
+		font-family: 'Lora';
+		border-radius: 3px;
+		letter-spacing: 1px;
+		border: 1px solid darken( $tome-green, 20% );
+		display: inline-block;
+		margin-top: 200px;
+	}
+
+	.cta-description {
+		display: block;
+		margin-top: 10px;
+		font-family: 'Noto Sans', serif;
+		color: #BDBDBD;
+		font-size: 12px;
+	}
+
+	.search-chapters {
+		float: right;
+		font-weight: 100;
+		box-shadow: none;
+		width: 200px;
+		height: 35px;
+		background: url('../images/magnifier.png') no-repeat 170px center;
+		background-size: 16px;
+		border: 0;
+		border-bottom: 1px solid #D8D5D2;
+		letter-spacing: 1px;
+		font-style: italic;
+		@include transition(border-color 0.4s);
+
+
+		&:focus { border-color: $tome-green; }
+	}
+
+	.dashboard-widget-title {
+		margin-top: 0;
+		margin-bottom: 30px;
+		display: inline-block;
+		line-height: 1.5em;
+		font-style: italic;
+	}
+
+	.new-chapter {
+		@include tome-button($tome-green);
+		padding: 0px 20px;
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 7px;
+		margin-left: 15px;
+	}
+
+	.chapter {
+		border-bottom: 1px solid #d8d5d2;
+		padding-bottom: 3px;
+		padding-top: 15px;
+
+		&:hover .preview-link { opacity: 1; }
+
+		h2 {
+			display: inline-block;
+			margin: 0;
+			font-weight: 100;
+		}
+
+		.post-edit-link {
+			float: right;
+			text-decoration: none;
+			font-size: 14px;
+		}
+		.preview-link {
+			opacity: 0;
+			display: inline-block;
+			float: right;
+			font-size: 21px;
+			vertical-align: top;
+			margin-top: -2px;
+			color: #989898;
+			margin-right: 15px;
+			@include transition( opacity, 0.25s );
+
+			&:hover { color: $tome-green; }
+		}
+	}
+
+	.pagination {
+		float: left;
+		margin-bottom: 0;
+
+		li {
+			display: inline-block;
+
+			&.active a { background: darken($tome-green, 10%); }
+
+			a {
+				text-decoration: none;
+				color: white;
+				font-size: 14px;
+				padding: 10px 15px;
+				background: $tome-green;
+				transition: background 160 ease-in;
+
+				&:hover { background: darken($tome-green, 10%); }
+			}
+		}
+	}
+
+	.reorder-link {
+		background: $tome-green;
+		float: right;
+	}
+}

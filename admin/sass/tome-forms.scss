@@ -1,0 +1,50 @@
+
+form {
+ &[data-invalid]{
+   .error {
+    small.error { display: block; }
+   }
+  }
+}
+
+
+.form-row {
+  margin-bottom: 10px;
+
+  label {
+    cursor: pointer;
+    font-family: 'Helvetica Neue';
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    color: #989898;
+  }
+
+  &.error {
+    margin-bottom: 15px;
+    margin-left: 0;
+    padding-bottom: 15px;
+  }
+
+  input[type="text"], textarea {
+    width: 100%;
+    padding: 6px 10px;
+  }
+
+  small.error {
+    display: none;
+    width: 100%;
+    background: #DC3232;
+    padding: 5px 10px;
+    color: white;
+    font-style: italic;
+  }
+}
+
+  .inline-opts {
+    .opt {
+      display: inline-block;
+      margin-right: 15px;
+    }
+  }

@@ -1,0 +1,426 @@
+/*=====================================
+=            Tome Branding            =
+=====================================*/
+
+.post-type-chapter,
+.post-type-tome_map, {
+    &.post-php, &.post-new-php {
+        h1 { display: none; }
+    }
+}
+
+// custom admin logo
+#wpadminbar  #wp-admin-bar-wp-logo {
+    background: url("../images/admin_logo.png") no-repeat 1px 3px;
+    background-size: 72%;
+
+    .ab-item { width: 65px; }
+
+    &:hover .ab-item {
+        background: none;
+    }
+
+    .ab-icon { visibility: hidden; }
+}
+
+// tinymce visible/text stripe background
+.wp-editor-expand #wp-content-editor-tools { background: #f3efec; }
+
+// remove footer
+#wpfooter {
+    display: none;
+}
+
+.toplevel_page_tome-dashboard #wpbody-content {
+    padding-bottom: 0;
+}
+
+
+#wpadminbar .quicklinks .menupop .ab-sub-secondary>li .ab-item:focus a,
+#wpadminbar .quicklinks .menupop .ab-sub-secondary>li>a:hover {
+    color: $tome-green;
+}
+
+#wpadminbar .quicklinks .ab-sub-wrapper .menupop.hover>a .blavatar,
+#wpadminbar .quicklinks li a:focus .blavatar,
+#wpadminbar .quicklinks li a:hover .blavatar {
+    color: $tome-green;
+}
+
+
+.notice, div.updated {
+    background: none;
+    box-shadow: none;
+    font-style: italic;
+    font-size: 16px;
+    border-left: 1px solid #39b27d;
+
+    p {
+        font-size: 16px;
+        color: #9A9A9A;
+        font-family: 'Noto Sans';
+        letter-spacing: 0px;
+    }
+
+    .notice-dismiss:hover {
+        background: none;
+
+        &:before { color: $tome-green; }
+    }
+}
+
+#screen-meta-links {
+    margin-right: 125px;
+    overflow: auto;
+
+    .show-settings:focus { color: white; }
+
+    .screen-meta-toggle {
+        background: $trash-grey;
+        box-shadow: none;
+        border: 0;
+
+        button {
+            color: white;
+            padding-right: 15px;
+            height: 28px;
+
+            &:hover {
+                color: white;
+            }
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+#screen-meta { margin-right: 125px; }
+
+
+#wpadminbar>#wp-toolbar {
+    li a {
+        .ab-icon {
+            opacity: 0.45;
+        }
+        span.ab-label {
+            color: $tome-green;
+        }
+    }
+}
+
+.wp-core-ui {
+
+    p .button { vertical-align: top }
+
+    .button {
+        background: #858384;
+        color: white;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        padding: 0 10px;
+        line-height: 28px;
+
+        &:focus {
+            background: #858384;
+            color: white;
+            box-shadow: none;
+        }
+
+        &:hover {
+            background: darken( #858384, 10% );
+            color: white;
+        }
+
+        &.btn-red { background: $tome-green; }
+    }
+
+    .button-primary {
+        @include tome-button( $tome-green );
+    }
+
+    .button-secondary {
+        @include tome-button();
+    }
+}
+
+// title input field
+#titlediv {
+    #title-prompt-text {
+        padding: 0 10px;
+        line-height: 60px;
+    }
+    #title {
+        background: none;
+        border: none;
+        box-shadow: none;
+        position: relative;
+        line-height: 60px;
+        height: auto;
+        border-bottom: 1px solid #E6E6E6;
+    }
+}
+
+//main toolbar
+div.mce-toolbar-grp {
+    background: #e5e5e5;
+    padding: 5px 0;
+
+    .mce-btn-group .mce-btn.mce-wp-dfw {
+        margin: 10px 5px 0 0;
+    }
+}
+
+
+// submit box start
+#poststuff {
+    h2 {
+        background: #f4f3f1;
+        font-family: 'Noto Sans';
+        font-weight: 100;
+        font-size: 18px;
+        color: #5e6366;
+    }
+}
+
+.postbox {
+    border: 1px solid #dbdad8;
+}
+
+
+// metabox
+#poststuff {
+    .postbox-container {
+        .inside {
+            background: #f4f3f1;
+            padding-top: 10px;
+            margin: 0;
+        }
+        select {
+            background: #f4f3f1;
+            border-radius: 0;
+            box-shadow: none;
+            width: 250px;
+            height: 38px;
+        }
+        input[type="checkbox"] {
+            box-shadow: none;
+            border: 1px solid #dbdad8;
+            background: none;
+
+            &:before {
+                color: #37b17e;
+            }
+        }
+        input[type="radio"] {
+            background: #d4d5d7;
+            box-shadow: none;
+            border: none;
+            width: 17px;
+            height: 17px;
+
+            &:checked:before {
+                background-color: #37b17e;
+                width: 9px;
+                height: 9px;
+            }
+        }
+    }
+}
+
+.postbox .hndle, .stuffbox .hndle {
+    border-bottom: 1px solid #dbdad8;
+
+}
+
+// permalink
+#edit-slug-box {
+    color: #c2c2c0;
+    margin-bottom: 20px;
+
+    a {
+        color: #c2c2c0;
+        font-size: 12px;
+    }
+    strong { font-weight: normal; }
+
+    #edit-slug-buttons {
+        .button {
+            margin-left: 10px;
+            background: none;
+            color: #39b27d;
+            font-size: 12px;
+            text-decoration: underline;
+
+            &.save {
+                background: $tome-green;
+                color: white;
+                text-decoration: none;
+                font-size: 12px;
+                margin-right: 5px;
+            }
+
+        }
+        .cancel {
+            background: $tome-grey;
+            color: white;
+            height: 24px;
+            text-decoration: none;
+            font-size: 12px;
+            padding: 0 10px;
+            vertical-align: top;
+        }
+    }
+
+}
+
+// publish box
+.submitbox {
+    background: #f4f3f1;
+
+    .spinner { display: none; }
+
+    #preview-action {
+        float: left;
+    }
+
+    // actions area
+    #major-publishing-actions {
+        border-top: 0;
+        margin-top: 20px;
+
+        input[type="submit"], a {
+            display: inline-block;
+            box-shadow: none;
+            border: 0;
+            text-shadow: none;
+            color: white;
+            border-radius: 0;
+            line-height: 27px;
+            height: 27px;
+
+
+            &.preview { background: $tome-grey; }
+            &.submitdelete {
+                background: $trash-grey;
+                width: 26px;
+                height: auto;
+                line-height: 25px;
+            }
+        }
+        input[type="submit"] {
+            background: $tome-green;
+            margin-left: 5px;
+            &.disabled {
+                background: $tome-green!important;
+                color: white!important;
+            }
+        }
+    }
+
+    .misc-pub-section {
+        border-bottom: 1px solid #e1e0de;
+        padding: 6px 0 8px 0;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        > a {
+            float: right;
+            color: #39b27d;
+            text-decoration: none;
+        }
+    }
+}
+
+
+.show-author {
+    border-top: 1px solid #e1e0de;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-left: -12px;
+    margin-right: -12px;
+    padding-left: 10px;
+}
+
+.chapter-header-options {
+    table {
+        tr {
+            margin-bottom: 5px;
+            display: block;
+        }
+    }
+}
+
+
+// Menu section
+.folded #adminmenu li.menu-top:nth-child(n+8) .dashicons-before {
+    opacity: 0.4;
+}
+#adminmenu li.wp-menu-separator { background: black; height: 1px; margin-bottom: 5px; }
+
+#misc-publishing-actions label[for=post_status]:before,
+#post-body #visibility:before,
+#post-body .misc-pub-revisions:before,
+.curtime #timestamp:before, span.wp-media-buttons-icon:before {
+    display: none;
+}
+
+// submit box end
+
+// bottom info boxes
+.wp-editor-expand #post-status-info {
+    border: 0;
+    background: #e5e5e5;
+    box-shadow: none;
+    color: #b6b6b6;
+}
+
+
+// Table section
+.alternate, .striped>tbody>:nth-child(odd), ul.striped>:nth-child(odd) { background: #F3EFEC; }
+.comment-ays, .feature-filter, .imgedit-group, .popular-tags, .stuffbox, .widgets-holder-wrap, .wp-editor-container, p.popular-tags, table.widefat { background: #f4f3f1; }
+
+
+// buttons
+.wrap .add-new-h2:hover,
+.wrap .page-title-action:hover {
+    background: $tome-green;
+    color: white;
+}
+.wp-core-ui .button-group.button-hero .button,
+.wp-core-ui .button.button-hero {
+    background: $tome-green;
+    color: white;
+
+    &:hover {
+        background: darken($tome-green, 10%);
+        color: white;
+    }
+}
+
+
+.wp-core-ui .button-primary-disabled,
+.wp-core-ui .button-primary.disabled,
+.wp-core-ui .button-primary:disabled,
+.wp-core-ui .button-primary[disabled] {
+    background: #f7f7f7!important;
+    color: #a0a5aa!important;
+}
+
+
+
+#toplevel_page_tome-help a {
+    background: url("../images/menu_toggle_off.png") no-repeat right 10px center;
+
+    &.active { background: url("../images/menu_toggle_on.png") no-repeat right 10px center; }
+}
+
+.tooltip.tooltip-hidden {
+    opacity: 0!important;
+}
+
+.tooltip { z-index: 9999; }
+.references-tooltip { margin-top: -5px; }
+
+

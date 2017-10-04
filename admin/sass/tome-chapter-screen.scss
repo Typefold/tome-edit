@@ -1,0 +1,43 @@
+.post-type-chapter {
+
+    &.post-php, &.post-new-php {
+        #wpbody-content .wrap {
+            padding-top: 50px;
+
+            > h1 { display: none; }
+        }
+
+        #screen-meta-links .screen-meta-toggle button {
+            display: none;
+        }
+
+
+        #byline-input {
+        	background: none;
+        	box-shadow: none;
+        	border: 0;
+        	font-size: 18px;
+        	padding-left: 13px;
+        	padding-bottom: 5px;
+        	margin-bottom: 20px;
+        	font-style: italic;
+        	font-family: 'Lora';
+        	margin-top: 0;
+        	color: #848484;
+        	letter-spacing: 1px;
+        	display: inline-block;
+        	border-bottom: 1px solid #E6E6E6;
+        	width: 100%;
+        	min-width: auto;
+
+        	&.active {
+        		width: 100%;
+        		border: 1px solid #DBDAD8;
+        		padding: 10px 10px;
+        		box-shadow: rgba(0, 0, 0, 0.06) 0 0 10px;
+        	}
+        }
+
+    }
+
+}

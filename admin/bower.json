@@ -1,0 +1,26 @@
+{
+  "name": "tome-edit",
+  "homepage": "https://github.com/auginator/Tome",
+  "authors": [
+    "Jakub Kohout <jakub.kohout11@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "tome"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "list.js": "~1.1.1",
+    "list.pagination.js": "^0.1.1"
+  }
+}

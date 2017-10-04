@@ -1,0 +1,161 @@
+.tome-modal {
+	padding: 0;
+	z-index: 160000;
+	min-height: 400px;
+	display: none;
+    margin: 0 auto;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    background: white;
+
+    img { max-width: 100%; }
+
+	&.loading {
+		min-height: 400px;
+		background: url('../images/green-loader.gif') no-repeat center center;
+		background-color: white;
+	}
+
+	&.active {
+		display: block;
+		transform: scale(1);
+		opacity: 1;
+	}
+
+
+	.top-part {
+		background: whitesmoke;
+		overflow: auto;
+
+		.modal-content-wrapper { padding: 15px 30px 0 30px; }
+
+		.modal-section-tab {
+			color: grey;
+			padding: 15px 20px;
+			margin: 0;
+			float: left;
+			background: none;
+			border: 0;
+
+			&.active {
+				background: white;
+				color: grey;
+				border: 1px solid #DADADA;
+				border-bottom: none;
+			}
+		}
+	}
+
+	.main-content {
+		&.loading {
+			min-height: 400px;
+			background: url('../images/green-loader.gif') no-repeat center 240px;
+		}
+		.content { padding: 30px; }
+	}
+
+	.modal-content-wrapper {
+		padding: 30px;
+	}
+
+	.modal-section {
+		position: absolute;
+		top: 115px;
+		left: 0;
+		right: 0;
+		bottom: 60px;
+		overflow: auto;
+		padding-bottom: 0;
+	}
+
+	.bottom-content {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	.close-modal {
+		position: fixed;
+		top: 10px;
+		right: 15px;
+		font-size: 20px;
+	}
+}
+
+
+.embedded-media-wrapper {
+	border-top: 1px solid #DADADA;
+	font-family: "Noto Sans", sans-serif;
+
+	.embedded-media-list {
+		margin-left: -15px;
+		overflow: auto;
+	}
+
+	.embedded-media {
+		position: relative;
+		width: 23%;
+		padding-left: 15px;
+		margin-bottom: 15px;
+		float: left;
+		position: relative;
+
+		&:nth-child(4n+1) {
+			clear: left;
+		}
+
+
+		img {
+			width: 100%;
+			height: auto;
+			min-height: 180px;
+		}
+
+		h2 {
+			margin: 10px 0 5px 0;
+			font-size: 14px;
+			color: black;
+			cursor: pointer;
+			&:hover { color: $tome-green; }
+		}
+
+		.embedded-media-content {
+			position: relative;
+
+			.thumbnail-wrapp {
+				height: 180px;
+				background: grey;
+				overflow: hidden;
+
+				.media-placeholder { color: white; text-align: center; line-height: 180px; }
+			}
+		}
+
+		.add-media {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			@include border-radius(0);
+			margin: 0;
+			border-bottom: 1px solid #007196;
+			z-index: 9999999;
+			margin-bottom: -1px;
+			border: 0;
+			background: $tome-green;
+			color: rgba(255, 255, 255, 0.90);
+		}
+	}
+}
+
+#embedded-media-form {
+	input[type="submit"] {
+		@include tome-button($tome-green);
+		padding: 5px 20px;
+		cursor: pointer;
+	}
+}
